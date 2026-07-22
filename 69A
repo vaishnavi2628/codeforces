@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+ 
+int main(){
+int n;
+cin>>n;
+vector<vector<int>>matrix(n,vector<int>(3,0));
+for(int i=0;i<n;i++){
+for(int j=0;j<3;j++){
+ 
+cin>>matrix[i][j];
+}
+ 
+}
+int x =0;
+int y=0;
+int z=0;
+for(int i=0;i<n;i++){
+x+=matrix[i][0];
+y+=matrix[i][1];
+z+=matrix[i][2];
+}
+ 
+if(x==0&& y==0 && z==0){
+cout<<"YES"<<endl;
+}
+else{
+ 
+cout<<"NO"<<endl;
+}
+ 
+ 
+ 
+ 
+ 
+}
