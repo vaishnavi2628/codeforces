@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s1, s2, s3;
+    cin >> s1 >> s2 >> s3;
+
+    string combined = s1 + s2;
+
+    if (combined.length() != s3.length()) {
+        cout << "NO";
+        return 0;
+    }
+
+    int freq1[26] = {0};
+    int freq2[26] = {0};
+
+    for (char c : combined) {
+        freq1[c - 'A']++;
+    }
+
+    for (char c : s3) {
+        freq2[c - 'A']++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (freq1[i] != freq2[i]) {
+            cout << "NO";
+            return 0;
+        }
+    }
+
+    cout << "YES";
+    return 0;
+}
